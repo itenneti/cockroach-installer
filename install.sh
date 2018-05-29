@@ -83,7 +83,7 @@ function outputConnectUtil {
   touch "/usr/local/bin/sql"
   cat <<EOF > /usr/local/bin/sql
 #!/bin/bash
-cockroach sql --certs-dir=/etc/cockroachdb/certs "$@"
+cockroach sql --certs-dir=/etc/cockroachdb/certs "\$@"
 EOF
   chmod +x "/usr/local/bin/sql"
 }
